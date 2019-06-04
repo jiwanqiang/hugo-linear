@@ -1,0 +1,23 @@
+{{/*  {{- $style := resources.Get 'styles/main.scss' | resources.ExecuteAsTemplate 'styles/main-rendered.scss' . | resources.ToCSS | resources.Minify -}}
+*/}}
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Engineer, Big Data, INFRA, Mobile, iOS, Android'>
+<meta name='theme-color' content='#ffcd00'>
+
+<!-- SEO -->
+<meta name='robots' content='index,follow'>
+<meta name='referrer' content='origin-when-cross-origin'>
+
+<title>{{ .Site.Title }} - {{ .Kind }}</title>
+
+<link rel='icon' href=''>
+<link rel='stylesheet' type='text/css' href='{{ "css/style.css" | absURL }}'>
+
+{{ if eq .Type "posts" }}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{{ end }}

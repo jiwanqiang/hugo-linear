@@ -1,0 +1,14 @@
+<section>
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <article class='post-entry'>
+        <header class='post-header'>
+            <h2 class='post-title'>
+                <a class='post-link' href='{{ .Permalink }}'>{{ .Title }}</a>
+            </h2>
+            <p class='post-meta'>{{ .Date.Format "Mon, Jan 02, 2006" }} · {{ .ReadingTime }} min read</p>
+        </header>
+        <p class='post-summary'> {{ .Summary }}</p>
+        <footer class='post-footer'><a href='{{ .Permalink }}'>More...</a></footer>
+    </article>
+    {{ end }}
+</section>

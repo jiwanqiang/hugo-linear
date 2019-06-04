@@ -1,0 +1,42 @@
+baseURL = "https://jiwq.me/"
+title = "Wanqiang Ji"
+
+# Site
+theme = "hugo-linear"
+languageCode = "en-us" # en-us/zh-cn
+
+# Params
+[params]
+author = "子禾"
+description = "Major working field: scheduler / distributed computing / distributed storage"
+
+# Main Menu
+[[menu.main]]
+name = "home"
+weight = -10
+identifier = "home"
+url = "/"
+
+[[menu.main]]
+name = "posts"
+weight = -9
+identifier = "posts"
+url = "/posts"
+
+[[menu.main]]
+name = "works"
+weight = -8
+identifier = "works"
+url = "/works"
+
+[[menu.main]]
+name = "about"
+weight = -7
+identifier = "about"
+url = "/about"
+
+[[menu.main]]
+name = "hire!"
+weight = -6
+identifier = "hire"
+url = "https://linkedin.com/in/jiwq"
